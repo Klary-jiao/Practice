@@ -4,9 +4,10 @@ function drag(id){
 	var disY = 0;
 	obj.onmousedown = function(){
 		disX = ev.pageX-obj.offsetLeft;
-		document.onmousemove = function(){
-			obj.style.left= ev.pageX - disX+'px';
-			obj.style.top =ev.pageY = disY +'px';
+		disY = ev.pageY - obj.offsetTop;
+		document.onmousemove = function(ev){
+			obj.style.left = ev.clientX - disX +'px';c
+			obj.style.top = ev.clientY - disY +'px';c
 		}
 	}
 
