@@ -8,6 +8,10 @@ function drag(id){
 		document.onmousemove = function(ev){
 			obj.style.left = ev.clientX - disX +'px';c
 			obj.style.top = ev.clientY - disY +'px';c
+		};
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
 		}
 	}
 
